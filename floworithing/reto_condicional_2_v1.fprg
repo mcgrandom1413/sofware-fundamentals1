@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_2_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 03:21:29 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xODsxMTowNTo1OCBhLuKAr20uOzExNDUz"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xODswMzoyMToyOSBwLuKAr20uOzM7MTE1NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot; enter an integer  &quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="abs(num) % 2 == 0">
+                <then>
+                    <output expression="&quot; el numero digitado es: par &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; el numero digitado es: impar &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
