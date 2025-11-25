@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challeng_script_4_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 01:49:53 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTsxMjo1NjowMCBwLuKAr20uOzExNDU2"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTswMTo0OTo1MyBwLuKAr20uOzE7MTE1NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="NumLanz" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="iniciando" type="String" array="False" size=""/>
+            <output expression="&quot;press enter to roll&quot;" newline="True"/>
+            <input variable="iniciando"/>
+            <output expression="&quot;ingresa cuantos numeros de lanzamientos &quot;" newline="True"/>
+            <input variable="NumLanz"/>
+            <output expression="&quot;iniciando&quot; &amp; NumLanz &amp; &quot; veces &quot;" newline="True"/>
+            <for variable="i" start="1" end="NumLanz" direction="inc" step="1">
+                <assign variable="dado1" expression="random(6)+ 1"/>
+                <assign variable="dado2" expression="random(6) + 1"/>
+                <output expression="&quot;lanzamiento&quot; &amp; i &amp; &quot;: &quot;  &amp; dado1 &amp; &quot; y &quot; &amp; dado2" newline="True"/>
+                <if expression="dado1 == 6 and dado2 == 6">
+                    <then>
+                        <assign variable="i" expression="NumLanz"/>
+                        <output expression="&quot; &#161; oh ! par de seis obtenido&quot; &amp; &quot; game over &quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
