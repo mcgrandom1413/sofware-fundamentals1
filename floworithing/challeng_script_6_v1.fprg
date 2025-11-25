@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challeng_script_6_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 05:51:23 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTswMjoyNzowNiBwLuKAr20uOzExNDU5"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTswNTo1MToyMyBwLuKAr20uOzE7MTE1NjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="totalTiros" type="Integer" array="False" size=""/>
+            <declare name="sumaTiros" type="Integer" array="False" size=""/>
+            <declare name="totalPares" type="Integer" array="False" size=""/>
+            <declare name="totalImpares" type="Integer" array="False" size=""/>
+            <declare name="respuesta" type="String" array="False" size=""/>
+            <declare name="iniciar" type="String" array="False" size=""/>
+            <assign variable="totalTiros" expression="0"/>
+            <assign variable="sumaTiros" expression="0"/>
+            <assign variable="totalPares" expression="0"/>
+            <assign variable="totalimpares" expression="0"/>
+            <assign variable="respuesta" expression="&quot;S&quot;"/>
+            <output expression="&quot;press enter to roll dices &quot;" newline="True"/>
+            <input variable="iniciar"/>
+            <while expression="respuesta = &quot;S&quot;">
+                <output expression="&quot;  presiona enter para lanzar dados &quot;" newline="True"/>
+                <input variable="iniciar"/>
+                <assign variable="dado1" expression="random(6)+1"/>
+                <assign variable="dado2" expression="random(6)+1"/>
+                <output expression="&quot; Resultado &quot; &amp; dado1 &amp; &quot; y &quot; &amp; dado2" newline="True"/>
+                <if expression="(dado1 + dado2 )% 2 =0">
+                    <then>
+                        <assign variable="totalPares" expression="totalPares + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="totalimpares" expression="totalimpares + 1"/>
+                        <assign variable="totalTiros" expression="totalTiros + 1"/>
+                        <assign variable="sumaTiros" expression="sumaTiros + dado1 + dado2"/>
+                        <output expression="&quot; desea volver a lanzar dados  (S/N) &quot;" newline="True"/>
+                        <input variable="respuesta"/>
+                        <if expression="respuesta = &quot;S&quot; or &#13;&#10;respuesta = &quot;s&quot;">
+                            <then>
+                                <assign variable="respuesta" expression="&quot;S&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="respuesta = &quot;N&quot; or &#13;&#10;respuesta = &quot;n&quot;">
+                                    <then>
+                                        <assign variable="respuesta" expression="&quot;N&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="respuesta = &quot;SI&quot; or&#13;&#10;respuesta = &quot;si&quot;">
+                                            <then>
+                                                <assign variable="respuesta" expression="&quot;S&quot;"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot; REPORTE &quot;" newline="True"/>
+            <output expression="&quot;TOTAL DE TIROS ES : &quot; &amp; totalTiros" newline="True"/>
+            <output expression="&quot;SUMA TOTAA&#209; DE LOS TIORS ES :&quot; &amp; sumaTiros" newline="True"/>
+            <output expression="&quot;SUMA TOTAL DE LOS TIROS ES : &quot;  &amp; totalPares" newline="True"/>
+            <output expression="&quot;TOTAL DE LOS IMAPARES ES : &quot; &amp;  totalimpares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
