@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challeng_script_1_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 12:23:16 a.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMDsxMTozNzowOCBwLuKAr20uOzExNDYx"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTsxMjoyMzoxNiBhLuKAr20uOzE7MTE1NTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="iniciar" type="String" array="False" size=""/>
+            <output expression="&quot;press enter to roll dice &quot;" newline="True"/>
+            <input variable="iniciar"/>
+            <assign variable="dado" expression="random(6)+1"/>
+            <output expression="&quot;el resultado del dado es : &quot; &amp; dado" newline="True"/>
+            <if expression="dado % 2==0">
+                <then>
+                    <output expression="&quot; el resultado del dado es: Par &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;el resultado del dado es : Impar &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
