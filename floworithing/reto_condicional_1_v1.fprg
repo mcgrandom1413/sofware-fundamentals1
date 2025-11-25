@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_1_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 11:03:32 a.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xODswODo1NTowNiBhLuKAr20uOzExNDU3"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xODsxMTowMzozMiBhLuKAr20uOzE7MTE1NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare variables"/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="realsetime" type="String" array="False" size=""/>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="0"/>
+            <assign variable="dado2" expression="0"/>
+            <output expression="&quot; press  enter to roll dices &quot;" newline="True"/>
+            <input variable="realsetime"/>
+            <assign variable="dado1" expression="random(6)+1"/>
+            <assign variable="dado2" expression="random(6)+1"/>
+            <output expression="&quot; el resultados del dado 1 es :&quot; &amp; dado1" newline="True"/>
+            <output expression="&quot; el resultado del dado 2 es: &quot; &amp; dado2" newline="True"/>
+            <if expression="dado1 % 2 == 0">
+                <then>
+                    <output expression="&quot; el resultado de dado 1: es par  &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; su resultado de dado 1: es impar &quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado2 %2==0">
+                <then>
+                    <output expression="&quot; el resultado de dado 2: es par &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; el resultado de dado 2 : es impar &quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 = dado2">
+                <then>
+                    <assign variable="result" expression="dado1 = dado2"/>
+                    <output expression="&quot;&#161; you win !&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;game over &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
