@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_4._v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-17 10:54:15 a.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xNzsxMDoxMToyMyBhLuKAr20uOzExNDQw"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0xNzsxMDo1NDoxNSBhLuKAr20uOzE7MTE1NTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare variables or constants"/>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <declare name="num2" type="Real" array="False" size=""/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <comment text="variable to assing opt value ( between 1 - 5 )"/>
+            <declare name="opt" type="Integer" array="False" size=""/>
+            <comment text="initilize variables or constants"/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="num2" expression="0"/>
+            <comment text="get number 1"/>
+            <output expression="&quot; enter value to number 1: &quot;" newline="True"/>
+            <input variable="num1"/>
+            <comment text="get number 2"/>
+            <output expression="&quot;Enter valuen num 2: &quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot; MATH MENU : [1]. add - [2]. subs - [3]. mult - [4] div -[5]. all &quot;" newline="True"/>
+            <output expression="&quot;press any option [ 1 - 5 ]&quot;" newline="True"/>
+            <input variable="opt"/>
+            <if expression="opt = 1">
+                <then>
+                    <assign variable="result" expression="num1 + num2"/>
+                    <output expression="&quot; adiition : &quot; &amp; result" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="">
+                <then>
+                    <assign variable="result" expression="num1 - num2"/>
+                    <output expression="&quot; substraction &quot; &amp; result" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="">
+                <then>
+                    <assign variable="result" expression="num1 * num2"/>
+                    <output expression="&quot; multipliplication  &quot; &amp; result" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
